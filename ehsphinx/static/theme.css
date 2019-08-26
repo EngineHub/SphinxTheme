@@ -457,3 +457,7 @@ a:active, a:hover {
 .sponsorbox img {
   max-width: 100%;
 }
+
+div.command-topic {
+  overflow-x: auto;
+}
