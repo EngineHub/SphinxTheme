@@ -74,10 +74,12 @@ div.sphinxsidebar input {
 
 div.sphinxsidebar input[type=text] {
   max-width: 150px;
+  margin-right: 5px;
 }
 
 div.sphinxsidebar #searchbox input[type="submit"] {
   width: auto;
+  border: 1px solid #999999;
 }
 
 div.sphinxsidebar div > ul {
