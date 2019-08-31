@@ -460,6 +460,13 @@ a:active, a:hover {
   max-width: 100%;
 }
 
+/* Hack to make "fixed" footer work like actual footer.
+   Only other way to do this is pretending to be RTD theme or something. */
+.ethical-fixedfooter {
+    position: static !important;
+    width: 100% !important;
+}
+
 div.command-topic {
   overflow-x: auto;
 }
