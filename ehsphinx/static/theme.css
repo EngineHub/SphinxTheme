@@ -290,7 +290,7 @@ table.footnote, table.footnote td {
 div.footer {
   line-height: 150%;
   margin-top: -2em;
-  text-align: right;
+  text-align: center;
   width: auto;
   margin-right: 10px;
 }
