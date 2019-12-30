@@ -2,6 +2,8 @@
 
 {% set css_files = css_files + ['https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400italic,700italic,700,400'] %}
 
+{% set metatags = '<meta name="viewport" content="width=device-width, initial-scale=1.0">' %}
+
 {% set sidebars = ["searchbox.html", "globaltoc.html", "sourcelink.html"] %}
 
 {% if theme_collapsiblesidebar|tobool %}
@@ -14,9 +16,7 @@
     <a href="https://discord.gg/enginehub" class="btn btn-default navbar-btn navbar-right">Ask questions on our Discord</a>
     <a href="http://www.enginehub.org/" class="brand">EngineHub.org</a>
     <div class="nav">
-      <li><a href="http://www.enginehub.org/">See our projects</a></li>
       <li class="active"><a href="#">Docs</a></li>
-      <li><a href="https://discord.gg/enginehub">Discord</a></li>
     </div>
   </div>
 </div>

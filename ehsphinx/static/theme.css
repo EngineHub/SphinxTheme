@@ -2,8 +2,6 @@
 
 body {
   background-color: white;
-  margin-left: 1em;
-  margin-right: 1em;
   font-size: 14px;
 }
 
@@ -14,6 +12,33 @@ div.document, div.related, .container {
 
 div.document {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 860px) {
+  div.document {
+    flex-direction: column;
+  }
+
+  div.sphinxsidebar {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  div.body {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  div.nav {
+    display: none !important;
+  }
+}
+
+div.documentwrapper > div.bodywrapper {
+  margin: 0;
 }
 
 div.body p, div.body dd, div.body li {
@@ -44,6 +69,10 @@ div.related:first-child, .header + div.related {
 div.sphinxsidebar {
   line-height: 130%;
   font-size: 100%;
+  min-width: 230px;
+
+  margin-left: 0;
+  flex: 15%;
 }
 
 div.sphinxsidebar h3, div.sphinxsidebar h4 {
@@ -144,6 +173,7 @@ div.sphinxsidebar li.current > a:before {
 
 div.body {
   padding: 0 0 0 1.8em;
+  min-width: unset;
 }
 
 div.body p {
@@ -316,11 +346,11 @@ table {
 }
 
 .header {
-  background: linear-gradient(to bottom, #f4f4f4 0%,#f4f4f4 72%,#e8e8e8 100%);
-  margin: 0 -14px;
-  font-size: 18px;
+  background: #f8f8f8;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
   height: 50px;
-  border-bottom: 1px solid #4D3672;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -328,7 +358,9 @@ table {
   display: inline-block;
   padding: 12px 0;
   margin-right: 15px;
+  font-size: 18px;
   color: #777;
+  text-decoration: none;
 }
 
 .header .nav, .header .nav li {
@@ -342,6 +374,7 @@ table {
   height: 19px;
   font-size: 14px;
   color: #777;
+  text-decoration: none;
 }
 
 .header .nav li.active a {
@@ -356,28 +389,19 @@ table {
 .btn-default:hover {
   text-shadow: none;
   border-color: #c6c6c6;
-  background-image: -webkit-linear-gradient(top,#f8f8f8 0,#f1f1f1 100%);
-  background-image: -o-linear-gradient(top,#f8f8f8 0,#f1f1f1 100%);
-  background-image: linear-gradient(to bottom,#f8f8f8 0,#f1f1f1 100%);
+  background-image: linear-gradient(rgb(248, 248, 248) 0px, rgb(241, 241, 241) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#fff1f1f1', GradientType=0);
   background-position: 0 0;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  -webkit-transition: none;
-  -o-transition: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px;
   transition: none;
 }
 
 .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
   color: #333;
   border: 1px solid #bfbfbf;
-  background-image: -webkit-linear-gradient(top,#f5f5f5 0,#e4e4e4 100%);
-  background-image: -o-linear-gradient(top,#f5f5f5 0,#e4e4e4 100%);
-  background-image: linear-gradient(to bottom,#f5f5f5 0,#e4e4e4 100%);
+  background-image: linear-gradient(rgb(248, 248, 248) 0px, rgb(241, 241, 241) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe4e4e4', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px;
   background-color: #e4e4e4;
 }
 
@@ -403,9 +427,7 @@ a:active, a:hover {
 .btn.btn-default {
   border: 1px solid #ccc;
   color: #333;
-  background-image: -webkit-linear-gradient(top,#fff 0,#fff 100%);
-  background-image: -o-linear-gradient(top,#fff 0,#fff 100%);
-  background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+  background-image: linear-gradient(rgb(245, 245, 245) 0px, rgb(241, 241, 241) 100%);
   background-repeat: repeat-x;
   background-color: #fff;
   text-shadow: 0 1px 0 #fff;
@@ -414,9 +436,8 @@ a:active, a:hover {
 .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
   color: #333;
   border: 1px solid #bfbfbf;
-  background-image: -webkit-linear-gradient(top,#f5f5f5 0,#e4e4e4 100%);
-  background-image: -o-linear-gradient(top,#f5f5f5 0,#e4e4e4 100%);
-  background-image: linear-gradient(to bottom,#f5f5f5 0,#e4e4e4 100%);
+  background-image: linear-gradient(rgb(248, 248, 248) 0px, rgb(241, 241, 241) 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px;
   background-repeat: repeat-x;
   background-color: #e4e4e4;
 }
