@@ -491,3 +491,9 @@ a:active, a:hover {
 div.command-topic {
   overflow-x: auto;
 }
+
+/* Hack for centering YT embeds */
+iframe {
+  display: block;
+  margin: 0.5rem auto;
+}
