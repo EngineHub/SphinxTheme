@@ -492,14 +492,4 @@ div.command-topic {
   overflow-x: auto;
 }
 
-/* Hack for centering YT embeds */
-div.body > div.section > iframe {
-  display: block;
-  margin: 0.5rem auto;
-}
-
-@media print {
-  div.body > div.section > iframe {
-    display: none;
-  }
-}
+@media print { .no-print { display: none }}
