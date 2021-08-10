@@ -493,7 +493,13 @@ div.command-topic {
 }
 
 /* Hack for centering YT embeds */
-iframe {
+div.body > div.section > iframe {
   display: block;
   margin: 0.5rem auto;
+}
+
+@media print {
+  div.body > div.section > iframe {
+    display: none;
+  }
 }
